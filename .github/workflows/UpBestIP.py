@@ -45,7 +45,7 @@ def fetch_ip_list(url: str) -> list:
     response = requests.get(url)  # 发送 GET 请求获取数据
     response.raise_for_status()   # 检查响应状态，若请求失败则抛出异常
     ip_lines = response.text.strip().split('\n')
-    return ip_lines[:2]  # 只返回前两行
+    return ip_lines[:10]  # 只返回前两行
 
 # 获取 Cloudflare 第一个域区的信息，返回 (zone_id, domain)
 def fetch_zone_info(api_token: str) -> tuple:
