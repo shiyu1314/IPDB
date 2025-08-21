@@ -2,8 +2,8 @@ name: 更新 UpBestIP
 
 on:
   schedule:
-    - cron: '*/70 * * * *'  # 每隔三十分钟运行一次
-  workflow_dispatch:             # 支持手动触发
+    - cron: '*/70 * * * *'  
+  workflow_dispatch:            
 
 jobs:
   UpBestIP:
