@@ -75,7 +75,7 @@ def update_dns_record(api_token: str, zone_id: str, subdomain: str, domain: str,
                 "type": dns_type,
                 "name": full_record_name,
                 "content": ip,
-                "ttl": 1,         # 自动 TTL
+                "ttl": 60,         # 自动 TTL
                 "proxied": False  # 不启用 Cloudflare 代理
             }
             response = requests.post(f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records",
